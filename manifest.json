@@ -1,0 +1,10 @@
+{
+  "display_name": "Local Chatbot Arena",
+  "loading_order": 1,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "author": "lucyknada",
+  "version": "1.0.0",
+  "homePage": "https://github.com/lucyknada/SillyTavern-Connections-Arena"
+}
