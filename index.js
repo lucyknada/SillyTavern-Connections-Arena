@@ -53,7 +53,7 @@ async function interceptMessage() {
 function getValue(value) {
   const extras = getLatestMessage().extra
   const storage = JSON.parse(localStorage.getItem("chatbot_arena_storage"))?.[`${extras.model}`]
-  return storage?.[value]
+  return (storage?.[value] ?? null)
 }
 
 function storeKeyValue(key, value) {
@@ -104,7 +104,7 @@ function getStats() {
 }
 
 function cleanStats() {
-  localStorage.removeItem("chatbot_arena_storage")
+  localStorage.setItem("chatbot_arena_storage", "{}")
   toastr.info("Arena stats reset!")
 }
 
